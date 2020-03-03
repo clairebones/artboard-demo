@@ -56,22 +56,22 @@ const Artboard = () => {
       <header className="artboard_header">
         <div className="artboard_header--nav">
           <div className="closeButton">
-            <Link to={`/`}><img className="closeIcon" src={closeIcon}/></Link>
+            <Link to={`/`}><img className="closeIcon" src={closeIcon} alt="Back to document view" /></Link>
           </div>
           <div className="nav">
             {(id > 0) &&
               <Link to={`/`+(parseInt(id)-1)}>
-                <img className="navIcon" src={arrowLeftIcon}/>
+                <img className="navIcon" src={arrowLeftIcon} alt="Previous artboard" />
               </Link>
             }
               <div className="breadcrumbs">
                 {parseInt(id)+1}
-                <img className="navIcon" src={breadcrumbIcon}/>
+                <img className="navIcon" src={breadcrumbIcon} alt="of" />
                 {data.share.version.document.artboards.entries.length}
               </div>
               {(id < (data.share.version.document.artboards.entries.length-1)) &&
                 <Link to={`/`+(parseInt(id)+1)}>
-                  <img className="navIcon" src={arrowRightIcon}/>
+                  <img className="navIcon" src={arrowRightIcon} alt="Next artboard"/>
                 </Link>
               }
             </div>
@@ -81,7 +81,8 @@ const Artboard = () => {
         </div>
       </header>
       <main className="artboard_container">
-        <img 
+        <img
+          alt={artboard.name}
           className="artboard_image"
           src={artboard.files[0].url}
           srcSet={sourceSet}

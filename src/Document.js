@@ -41,15 +41,13 @@ export default function Document() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
-  console.log('data', data);
-
   return (
     <Fragment>
       <header className="document_header">
         <div className="sketchIconContainer" >
-          <img className="sketchIcon" src={sketchIcon}/>
+          <img className="sketchIcon" src={sketchIcon} alt="Sketch logo"/>
         </div>
-        <img className="separatorIcon" src={separatorIcon}/>
+        <img className="separatorIcon" src={separatorIcon} role="presentation"/>
         {data.share.version.document.name}
       </header>
       <main>

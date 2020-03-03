@@ -8,15 +8,13 @@ const Thumbnail = ({
     artboard,
     id
 }) => {
-    console.log('artboard', artboard);
     const files = artboard.files;
     const thumbnail = files[0].thumbnails[0];
-    console.log('id', id);
 
     return (
         <Link to={`/`+id} className="thumbnail">
             <div className="imageContainer">
-                <img src={thumbnail.url}/>
+                <img src={thumbnail.url} role="presentation"/>
             </div>
             <span className="artboardName">{artboard.name}</span>
         </Link>
