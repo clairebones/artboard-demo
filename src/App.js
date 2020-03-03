@@ -7,6 +7,7 @@ import {
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "@apollo/react-hooks";
 import Document from './Document';
+import Artboard from './Artboard';
 import './App.css';
 
 const client = new ApolloClient({
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/">
             <Document />
           </Route>
+          <Route path="/:id" children={<Artboard />} />
         </Switch>
       </Router>
     </ApolloProvider>
