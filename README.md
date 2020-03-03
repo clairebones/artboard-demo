@@ -13,13 +13,20 @@ In the project directory, you can run:
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+## Decisions Made
 
-### `npm test`
+I decided to use create-react-app to decrease the required time in setting up the initial app structure and build process.
 
-Launches the test runner in the interactive watch mode.
+I decided to use some BEM and some non-BEM CSS just to show that I am comfortable using the technique, and imported the SVG files into the css rather than using as background-images simply for readability.
 
-### `npm run build`
+## Improvements
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I would, if I had more time, build tests which ensure that the data correctly loads and that the components are displayed on the page as expected. I would ideally use a mixture of unit tests and snapshot tests for this. I qould lean towards not using visual regression tests as the artboards loaded in might have changes, causing false failures of the tests.
 
+I would also have added the document code as another URL parameter, defaulting to the share code `Y8wDM` if none was provided in the URL.
+
+I would also like to further improve the accessibility of the app, current all images are either described (if they are buttons or the main image) or marked as presentation-only if they do not provide useful content.
+
+I would also better structure the files, creating folders for each component that the css and JS could live in fo example, in order to improve readibility if the app became larger.
+
+If I were to continue with the app I would also have liked to fully add the Progressive Web App functionality hinted at in the initial app setup.
