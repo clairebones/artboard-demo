@@ -1,0 +1,6 @@
+.thumbnails {
+    // display: flex;
+    // flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+}
