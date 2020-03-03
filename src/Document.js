@@ -4,6 +4,8 @@ import gql from "graphql-tag";
 import Thumbnail from './Thumbnail';
 
 import './Document.scss';
+import sketchIcon from './assets/sketch-logo.svg';
+import separatorIcon from './assets/separator.svg';
 
 export default function Document() {
   const { loading, error, data } = useQuery(gql`
@@ -43,7 +45,11 @@ export default function Document() {
 
   return (
     <Fragment>
-      <header>
+      <header className="document_header">
+        <div className="sketchIconContainer" >
+          <img className="sketchIcon" src={sketchIcon}/>
+        </div>
+        <img className="separatorIcon" src={separatorIcon}/>
         {data.share.version.document.name}
       </header>
       <main>
