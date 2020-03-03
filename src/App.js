@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "@apollo/react-hooks";
+import Document from './Document';
 import './App.css';
+
+const client = new ApolloClient({
+  uri: "https://graphql.sketch.cloud/api"
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApolloProvider client={client}>
+      <Router className="App">
+        <header className="App-header">
+          Header
+        </header>
+        <main>
+          <Switch>
+            <Route exact path="/">
+              <Document />
+            </Route>
+          </Switch>
+        </main>
+      </Router>
+    </ApolloProvider>
   );
 }
 
