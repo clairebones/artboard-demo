@@ -17,16 +17,11 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router className="App">
-        <header className="App-header">
-          Header
-        </header>
-        <main>
-          <Switch>
-            <Route exact path="/">
-              <Document />
-            </Route>
-          </Switch>
-        </main>
+        <Switch>
+          <Route exact path="/">
+            <Document />
+          </Route>
+        </Switch>
       </Router>
     </ApolloProvider>
   );
