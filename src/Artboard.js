@@ -3,7 +3,7 @@ import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
 import { useParams } from "react-router-dom";
 
-// import './Artboard.scss';
+import './Artboard.scss';
 
 const Artboard = () => {
   let { id } = useParams();
@@ -47,11 +47,11 @@ const Artboard = () => {
   });
 
   return (
-    <Fragment>
-      <header>
+    <Fragment className="artboard">
+      <header className="artboard_header">
         {artboard.name}
       </header>
-      <main>
+      <main className="artboard_container">
         <img 
           className="artboard_image"
           src={artboard.files[0].url}

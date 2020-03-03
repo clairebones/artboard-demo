@@ -16,16 +16,18 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <Router className="App">
-        <Switch>
-          <Route exact path="/">
-            <Document />
-          </Route>
-          <Route path="/:id" children={<Artboard />} />
-        </Switch>
-      </Router>
-    </ApolloProvider>
+    <div className="app">
+      <ApolloProvider client={client}>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Document />
+            </Route>
+            <Route path="/:id" children={<Artboard />} />
+          </Switch>
+        </Router>
+      </ApolloProvider>
+    </div>
   );
 }
 
