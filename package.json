@@ -34,6 +34,7 @@
     "@testing-library/user-event": "^7.2.1",
     "apollo-boost": "^0.4.7",
     "graphql": "^14.6.0",
+    "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",

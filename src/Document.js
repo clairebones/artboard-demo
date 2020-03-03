@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react';
 import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
+import Thumbnail from './Thumbnail';
+
+import './Document.scss';
 
 export default function Document() {
   const { loading, error, data } = useQuery(gql`
@@ -44,12 +47,10 @@ export default function Document() {
         {data.share.version.document.name}
       </header>
       <main>
-        <ul>
+        <ul className="thumbnails">
           {data.share.version.document.artboards.entries.map((artboard, index) => {
             return (
-            <li key={index}>
-              <span>{artboard.name}</span>
-            </li>
+                <Thumbnail artboard={artboard} key={index} id={index}/>
             );
           })}
         </ul>
