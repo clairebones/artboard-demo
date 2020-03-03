@@ -53,13 +53,13 @@ export default function Document() {
         {data.share.version.document.name}
       </header>
       <main>
-        <ul className="thumbnails">
+        <div className="thumbnails">
           {data.share.version.document.artboards.entries.map((artboard, index) => {
             return (
                 <Thumbnail artboard={artboard} key={index} id={index}/>
             );
           })}
-        </ul>
+        </div>
       </main>
       
     </Fragment>

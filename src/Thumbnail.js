@@ -15,8 +15,10 @@ const Thumbnail = ({
 
     return (
         <Link to={`/`+id} className="thumbnail">
-            <img src={thumbnail.url} height={thumbnail.ght} width={thumbnail.width}/>
-            <span>{artboard.name}</span>
+            <div className="imageContainer">
+                <img src={thumbnail.url}/>
+            </div>
+            <span className="artboardName">{artboard.name}</span>
         </Link>
     )
 };

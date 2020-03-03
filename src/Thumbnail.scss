@@ -3,4 +3,20 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-decoration: none;
+
+    .imageContainer {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.artboardName {
+    padding-top: 1rem;
+    color: rgb(0,0,0);
 }
