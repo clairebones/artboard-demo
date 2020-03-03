@@ -23,7 +23,7 @@ I decided to use some BEM and some non-BEM CSS just to show that I am comfortabl
 
 I would, if I had more time, build tests which ensure that the data correctly loads and that the components are displayed on the page as expected. I would ideally use a mixture of unit tests and snapshot tests for this. I qould lean towards not using visual regression tests as the artboards loaded in might have changes, causing false failures of the tests.
 
-I would also have added the document code as another URL parameter, defaulting to the share code `Y8wDM` if none was provided in the URL.
+I would also have added the document code as another URL parameter, defaulting to the share code `Y8wDM` if none was provided in the URL. As part of this, I would find a way to better optimise the GraphlQL queries, either by using an artboard-specific if I had access to or influence over the schema, or by making the query at a higher level and sharing the data across pages.
 
 I would also like to further improve the accessibility of the app, current all images are either described (if they are buttons or the main image) or marked as presentation-only if they do not provide useful content.
 
